@@ -1,0 +1,48 @@
+{% extends 'layouts/base.html' %}
+{% block 'title' %} Inicio {% endblock  %}
+{% block 'content' %}
+    <section class='section'>
+        <h4>
+            Productos
+        </h4>
+        <div class='container'>
+            <p class='container__description'>
+                Bienvenido aca puedes observar todos los productos que se encuentran
+                registrados en tu negocio.
+            </p>
+            <div class='container__information'>
+                <i class="fa-solid fa-gear"><span>Modificar</span></i>
+                <i class="fa-solid fa-trash"><span>Eliminar</span></i>
+            </div>
+        </div>
+        
+
+    </section>
+    <section class='section'>
+        <table class='table'>
+            <thead >
+                <tr>
+                    {% for column in column_names  %}
+                        <td>{{column}}</td>
+                    {% endfor %}
+                    <td>tools</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products  %}
+                    <tr>
+                        <td>{{product.name.title}}</td>
+                        <td>{{product.stock}}</td>
+                        <td>$ {{product.price_unit}}</td>
+                        <td>{{product.description}}</td>
+                        <td>{{product.supplier}}</td>
+                        <td>
+                            <button class='table__button'><span class='tooltip'>Modificar</span><i class="fa-solid fa-gear"></i></button>
+                            <button class='table__button'><span class='tooltip'>Eliminar</span><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+{% endblock  %}
