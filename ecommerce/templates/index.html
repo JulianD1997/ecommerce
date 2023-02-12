@@ -1,4 +1,5 @@
 {% extends 'layouts/base.html' %}
+{% load static %}
 {% block 'title' %} Inicio {% endblock  %}
 {% block 'content' %}
     <section class='section'>
@@ -15,10 +16,9 @@
                 <i class="fa-solid fa-trash"><span>Eliminar</span></i>
             </div>
         </div>
-        
-
     </section>
     <section class='section'>
+        {% include 'layouts/partials/search.html' %}
         <table class='table'>
             <thead >
                 <tr>
