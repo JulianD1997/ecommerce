@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block 'title' %} editar producto | {{product.name}} {% endblock  %}
+
+{% block 'styles' %}
+
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+
+{% endblock %}
+
+{% block 'content' %}
+
+    <section class='section'>
+            <a class='button__back' href="{% url 'index' %}"><i class="fa-solid fa-chevron-left"></i> Volver</a>
+        <h4>
+            {{accion.title}}
+        </h4>
+    </section>
+    <section class='section'>
+        <form class='form' action="">
+            {% csrf_token %}
+            {{form.as_div}}
+            <input class='button' type="submit" value='Guardar'>
+        </form>
+    </section>
+
+{% endblock  %}

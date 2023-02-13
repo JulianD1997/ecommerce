@@ -1,5 +1,4 @@
 {% extends 'layouts/base.html' %}
-{% load static %}
 {% block 'title' %} Inicio {% endblock  %}
 {% block 'content' %}
     <section class='section'>
@@ -37,8 +36,8 @@
                         <td>{{product.description}}</td>
                         <td>{{product.supplier}}</td>
                         <td>
-                            <button class='table__button'><span class='tooltip'>Modificar</span><i class="fa-solid fa-gear"></i></button>
-                            <button class='table__button'><span class='tooltip'>Eliminar</span><i class="fa-solid fa-trash"></i></button>
+                            <a class='table__button' href="{% url 'edit_product' id=product.id %}"><span class='tooltip'>Modificar</span><i class="fa-solid fa-gear"></i></a>
+                            <a class='table__button' href=""><span class='tooltip'>Eliminar</span><i class="fa-solid fa-trash"></i></a>
                         </td>
                     </tr>
                 {% endfor %}

@@ -1,0 +1,95 @@
+:root{
+    --color-primary: rgb(247,188,0);
+    --color-secundary: rgb(2, 166, 181);
+    --color-success: rgb(84,187,50);
+    --color-nav: rgb(208, 160, 3);
+    --color-white : rgb(255,255,255);
+    --color-black : rgb(0, 0, 0);
+    --color-danger : rgb(220,52,68);
+    --font-main : 'Varela Round', sans-serif;
+    --font-text : 'Roboto', sans-serif; 
+}
+
+.button__back{
+    text-decoration: none;
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0.2rem;
+    border-radius: 1.32rem;
+    box-shadow:
+        5px -5px 12px rgb(255, 255, 255),  
+        -5px 5px 12px rgb(102, 102, 102);
+    transition: box-shadow 300ms;
+}
+.button__back:hover{
+    box-shadow:
+        1px -1px 2px rgb(255, 255, 255),  
+        -1px 1px 2px rgb(102, 102, 102);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form > div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.form > div >label{
+    font-weight: 400;
+    margin: 0rem 0rem 0.2rem 0.2rem;
+    
+}
+.form__input{
+    margin-bottom: 0.2rem;
+    padding: 0px 0.5rem;
+    width: 40ch ;
+    height: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 0.2rem;
+}
+.form__area{
+    margin-bottom: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    resize: none;
+    width: 40ch;
+    height: 10ch;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 0.2rem;
+}
+.form__select{
+    margin-bottom: 0.2rem;
+    padding: 0px 0.5rem;
+    width: 40ch;
+    height: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 0.2rem;
+}
+.form__input:is(:hover,:focus){
+    outline: none;
+    background-color: rgb(250, 250, 250);
+    box-shadow:
+        0px -0px 10px var(--color-primary),  
+        -0px 0px 10px var(--color-white);
+}
+.form__area:is(:hover,:focus){
+    outline: none;
+    background-color: rgb(250, 250, 250);
+    box-shadow:
+        0px -0px 10px var(--color-primary),  
+        -0px 0px 10px var(--color-white);
+}
+.form__select:is(:hover,:focus){
+    outline: none;
+    background-color: rgb(250, 250, 250);
+    box-shadow:
+        0px -0px 10px var(--color-primary),  
+        -0px 0px 10px var(--color-white);
+}
+.button{
+    background-color: var(--color-success);
+}
