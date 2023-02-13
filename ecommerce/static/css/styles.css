@@ -8,7 +8,8 @@
     --color-white : rgb(255,255,255);
     --color-black : rgb(0, 0, 0);
     --font-main : 'Varela Round', sans-serif;
-    --font-text : 'Roboto', sans-serif; 
+    --font-text : 'Roboto', sans-serif;
+    --color-backgraund: rgb(250, 250, 250);
 }
 /*
 Main setting
@@ -37,6 +38,7 @@ h1, h2, h3, h4, h5, h6{
         'main    main    main'
         'footer footer  footer';
     gap: 1rem;
+    background-color: var(--color-backgraund);
 }
 .header{
     grid-area: header;
@@ -103,7 +105,7 @@ i>span{
         3px -3px 5px rgb(255, 255, 255),  
         -3px 3px 5px rgb(102, 102, 102);
 }
-.search__button{
+.button{
     margin-left: 20px ;
     height: 2rem;
     background-color: var(--color-primary);
@@ -115,13 +117,14 @@ i>span{
         -5px 5px 12px rgb(102, 102, 102);
     transition: box-shadow 300ms;
 }
-.search__button:hover{
+.button:hover{
     box-shadow:
         1px -1px 2px rgb(255, 255, 255),  
         -1px 1px 2px rgb(102, 102, 102);
 }   
 .table {
     position: relative;
+    margin-top: 2rem;
     width: 100%;
     border-collapse: collapse;
     background: var(--color-white);
