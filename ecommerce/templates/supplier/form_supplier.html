@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block 'title' %} editar producto | {{product.name}} {% endblock  %}
+{% block 'title' %}Agregar proveedor{% endblock  %}
 
 {% block 'styles' %}
 
@@ -16,20 +16,12 @@
         <h4>
             {{title.title}}
         </h4>
-        {% if messages %}
-            <ul class="messages">
-                {% for message in messages %}
-                    <li{% if message.tags %} class="messages__success"{% endif %}><i class="fa-solid fa-check"></i>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
     </section>
     <section class='section'>
-        <form accion='{{ accion }}' class='form' method="{{ method }}">
+        <form accion="{% url 'add_supplier' %}" class='form' method="POST">
             {% csrf_token %}
             {{form.as_div}}
             <input class='button' type="submit" value='Guardar'>
         </form>
     </section>
-
 {% endblock  %}

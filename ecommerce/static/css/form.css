@@ -11,6 +11,7 @@
 }
 
 .button__back{
+    align-self: start;
     text-decoration: none;
     background-color: var(--color-danger);
     color: var(--color-white);
@@ -22,6 +23,11 @@
         5px -5px 12px rgb(255, 255, 255),  
         -5px 5px 12px rgb(102, 102, 102);
     transition: box-shadow 300ms;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .button__back:hover{
     box-shadow:
@@ -92,4 +98,22 @@
 }
 .button{
     background-color: var(--color-success);
+}
+.messages{
+    align-self: center;
+    list-style-type: none;
+}
+.messages__success{
+    background-color: var(--color-success);
+    color: white;
+    font-weight: 500;
+    padding: 20px 10px;
+    border-radius: 1rem;
+}
+.fa-check{
+    padding: 0.25rem;
+    margin-right: 1rem ;
+    color: var(--color-success);
+    background-color: var(--color-white);
+    border-radius: 50%;
 }
