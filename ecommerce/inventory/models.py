@@ -13,7 +13,7 @@ class Product(models.Model):
     stock = models.IntegerField(default=20)
     price_unit = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
-    supplier = models.ForeignKey(Supplier,on_delete=models.CASCADE)
+    supplier = models.ForeignKey(Supplier,on_delete=models.CASCADE,related_name='supplier')
     
     def __str__(self):
         return self.name

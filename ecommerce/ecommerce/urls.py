@@ -7,5 +7,6 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index, name='index'),
+    path('<letter>',views.index, name='index'),
     path('',include('inventory.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -6,7 +6,12 @@ class SupplierForm(ModelForm):
     class Meta:
         model = Supplier
         fields = '__all__'
-
+        labels ={
+            'name': _('Nombre del proveedor'),
+        }
+        widgets ={
+            'name': TextInput(attrs={'class':'form__input'}),
+        }
 class ProductForm(ModelForm):
     
     class Meta:

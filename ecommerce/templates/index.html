@@ -18,12 +18,19 @@
     </section>
     <section class='section'>
         {% include 'layouts/partials/search.html' %}
+        <div class='search__letter'>
+            {% for char in abc  %}
+                <a class='letter' href="{% url 'index' letter=char %}">{{ char }}</a>
+            {% endfor %}
+        </div>
         <table class='table'>
             <thead >
                 <tr>
-                    {% for column in column_names  %}
-                        <td>{{column}}</td>
-                    {% endfor %}
+                    <form action="{% url 'index' %}" method='GET'>
+                        {% for column in column_names  %}
+                            <td><input class='input__order' name='order' type="submit" value={{column}}></td>
+                        {% endfor %}
+                    </form>
                     <td>tools</td>
                 </tr>
             </thead>
@@ -37,7 +44,7 @@
                         <td>{{product.supplier}}</td>
                         <td>
                             <a class='table__button' href="{% url 'edit_product' id=product.id %}"><span class='tooltip'>Modificar</span><i class="fa-solid fa-gear"></i></a>
-                            <a class='table__button' href=""><span class='tooltip'>Eliminar</span><i class="fa-solid fa-trash"></i></a>
+                            <a class='table__button' href="{% url 'delete_product' id=product.id %}"><span class='tooltip'>Eliminar</span><i class="fa-solid fa-trash"></i></a>
                         </td>
                     </tr>
                 {% endfor %}

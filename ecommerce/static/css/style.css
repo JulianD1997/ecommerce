@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 700;
 }
 /* End main*/
+/* Body settings */
 .body{
     display: grid;
     grid-template-areas: 
@@ -40,6 +41,23 @@ h1, h2, h3, h4, h5, h6{
     gap: 1rem;
     background-color: var(--color-backgraund);
 }
+.section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+i>span{
+    margin-left: 0.5rem;
+}
+/* End Body */
+
+/* Nav settings */
 .header{
     grid-area: header;
     text-align: center;
@@ -73,24 +91,14 @@ h1, h2, h3, h4, h5, h6{
 .main{
     padding: 0px 1rem;
     grid-area: main;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
-.section{
-    width: 100%;
-}
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-}
-i>span{
-    margin-left: 0.5rem;
-}
+/* End nav */
+
+/* Search settings */
 .search{
     width: 400px;
     height: 2rem;
@@ -121,8 +129,34 @@ i>span{
     box-shadow:
         1px -1px 2px rgb(255, 255, 255),  
         -1px 1px 2px rgb(102, 102, 102);
-}   
+}
+.search__letter{
+    align-self: center;
+    display: flex;
+    gap: 1rem;
+}
+.letter{
+    text-transform: uppercase;
+    color: var(--color-black);
+    transition: height 300ms,weight 300ms;
+}
+.letter:hover{
+    transform: scale(1.1);
+}
+.all{
+    color: var(--color-black);
+    align-self: center;
+    margin-left: 2rem;
+    transition: 500ms;
+}
+.all:hover{
+    transform: scale(1.1);
+}
+/* End search */
+
+/* Table settings */
 .table {
+    overflow: hidden;
     position: relative;
     margin-top: 2rem;
     width: 100%;
@@ -138,15 +172,16 @@ i>span{
     color:  var(--color-white);
     text-align: center;
     height: 2rem;
-    border-bottom: 2px solid var(--color-black) ;
+    border-bottom: 1px solid var(--color-black) ;
 }
 .table thead td {
     padding: 0.2rem;
     text-transform: uppercase;
     font-weight: 600;
-    border-right: 2px solid var(--color-black)
+    border-right: 1px solid var(--color-black)
 }
 .table thead td:first-child {
+    overflow: hidden;
     border-radius: 0.3rem 0px 0px 0px;
 }
 .table thead td:last-child {
@@ -156,7 +191,7 @@ i>span{
 .table tbody tr {
     text-align: center;
     height: 2rem;
-    border-bottom: 2px solid var(--color-black) ;
+    border-bottom: 1px solid var(--color-black) ;
 }
 .table tbody tr:last-child{
     border: none;
@@ -164,7 +199,7 @@ i>span{
 .table tbody td {
     padding: 0.2rem;
     font-weight: 400;
-    border-right: 2px solid var(--color-black)
+    border-right: 1px solid var(--color-black)
 }
 .table tbody td:last-child{
     border: none;
@@ -211,6 +246,16 @@ i>span{
     display: block;
     z-index: 100;
 }
+.input__order{
+    cursor: pointer;
+    background-color: transparent;
+    color:  var(--color-white);
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    width: 90%;
+}
+/* end table */
 .footer{
     grid-area: footer;
     text-align: center;

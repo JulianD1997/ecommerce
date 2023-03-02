@@ -1,6 +1,7 @@
 <div class='container'>
     <form action="{% url 'index' %}" method='GET'>
         <input type="text" name="search" class='search' placeholder='Buscar producto' autocomplete="off">
-        <input type='submit' class='button' value='Buscar'>
+        <input type='submit' class='button' value='Buscar'>        
     </form>
+    <a class='all' href="{% url 'index' %}">ver todos</a>
 </div>
